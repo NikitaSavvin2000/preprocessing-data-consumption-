@@ -27,5 +27,7 @@ if interval > 1:
     for i in range(interval-1):
         date += timedelta(minutes=5)
         list_date.append(date)
+    df_interval = pd.DataFrame(list_date)
+    df_interval.to_csv(r'C:\Users\nsavvin\Desktop\test result.csv', index=False, header=False)
 print(interval)
-print(list_date)
+print(df_interval)
